@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.sass']
 })
-export class AppComponent {
-  title = 'firstangular.de';
+export class AppComponent implements OnInit {
+  images = ['dove-2516641_1920.jpg', 'mountains-615428_1920.jpg', 'road-1072821_1920.jpg'];
+  currentImage = 0;
+  showImage = true;
+
+  ngOnInit() {
+    this.updateImage();
+  }
+
+  updateImage() {
+    setInterval(() => {
+      this.currentImage++;
+      this.currentImage = this.currentImage % this.images.length;
+      this.showImage = false;
+
+      setTimeout(() => {
+        this.showImage = true;
+      }, 10);
+    }, 8000);
+  }
 }
