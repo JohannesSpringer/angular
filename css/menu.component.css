@@ -1,0 +1,43 @@
+header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 80px;
+  z-index: 1;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  padding-left: 120px;
+  padding-right: 120px;
+  flex-wrap: wrap;
+}
+header img {
+  height: 50px;
+  cursor: pointer;
+}
+header a {
+  color: white;
+  text-decoration: none;
+  margin-left: 32px;
+  font-weight: 600;
+}
+header a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+header .header-links {
+  display: flex;
+  align-items: center;
+}
+
+.darkLinks a {
+  color: black;
+}
+.darkLinks a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.headerDark {
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2);
+}/*# sourceMappingURL=menu.component.css.map */
